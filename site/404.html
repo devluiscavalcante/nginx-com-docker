@@ -2,10 +2,77 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Página não encontrada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | Não Encontrado</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --brand: #e11d48;
+      --brand-hover: #be123c;
+      --shadow: 0 20px 50px rgba(0,0,0,0.05);
+    }
+
+    /* Mesma estrutura do index para manter consistência */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      background: var(--card);
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      max-width: 450px;
+      width: 90%;
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 800;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+
+    p { color: var(--text-muted); margin-bottom: 2rem; line-height: 1.6; }
+
+    .btn-home {
+      display: inline-block;
+      background-color: var(--brand);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-home:hover {
+      background-color: var(--brand-hover);
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
-  <h1>404 - Não encontrado</h1>
-  <p>Essa página não existe.</p>
+  <main class="container">
+    <div class="error-code">404</div>
+    <h1>Página não encontrada</h1>
+    <p>O link que você tentou acessar não existe ou foi movido para um novo endereço.</p>
+    <a href="/" class="btn-home">Voltar ao Início</a>
+  </main>
 </body>
 </html>
